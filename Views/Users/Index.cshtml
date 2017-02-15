@@ -1,0 +1,55 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container">
+    <h1>Log In and Registration with ASP.NET Core + Dapper</h1>
+    <div class="register box">
+        <h3>Register</h3>
+        <form action="Register" method="post">
+            <label for="fname">First Name:</label>
+            <input id="fname" type="text" name="FirstName"><br> 
+
+            <label for="lanem">Last Name:</label>
+            <input id="lname" type="text" name="LastName"><br>
+
+            <label for="email">Email:</label>
+            <input id="email" type="email" name="Email"><br>
+
+            <label for="pw">Password:</label>
+            <input id="pw" type="password" name="Password"><br>
+
+            <label for="pw_conf">Password Confirm:</label>
+            <input id="pw_conf" type="password" name="PasswordConfirmation"><br><br>
+
+            <input type="submit" value="Register" class="btn btn-success">
+        </form>
+    </div>
+
+
+    <div class="login box">
+        <h3>Log In</h3>
+        <form action="Login" method="post">
+            <label for="emaill">Email:</label>
+            <input id="emaill" type="email" name="Email"><br>
+
+            <label for="passwordl">Password:</label>
+            <input id="passwordl" type="password" name="PwToCheck"><br><br>
+
+            <input type="submit" value="Log In" class="btn btn-success">
+        </form>
+    </div>
+    <div>
+        @{
+            foreach(var error in ViewBag.errors){
+                //If there are any errors for a field...
+                if(@error.Errors.Count > 0){
+                    // We show the first error for that field
+                    <p>@error.Errors[0].ErrorMessage</p>
+                }
+            }
+        }
+    </div>
+
+    @ViewBag.lerrors
+
+</div>

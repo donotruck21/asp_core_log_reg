@@ -1,0 +1,40 @@
+/*Write all of your CSS here*/
+*{
+    margin: 0 auto;
+}
+.container{
+    text-align: center;
+}
+
+.box{
+    display: inline-block;
+    vertical-align: top;
+    border: 2px solid black;
+    height: 300px;
+    width: 400px;
+    position: relative;
+    margin-top: 30px;
+}
+
+.box h3{
+    text-align: left;
+    background: white;
+    position: absolute;
+    top: -35px;
+    left: 20px;
+}
+
+form{
+    margin-top: 20px;
+    width: 310px;
+}
+
+.register label{
+    width: 150px;
+    text-align: right;
+}
+
+.login label{
+    width: 100px;
+    text-align: right;
+}
